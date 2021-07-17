@@ -1,0 +1,34 @@
+diff -ur kyotocabinet-1.2.76/configure kyotocabinet-1.2.76-patched/configure
+--- kyotocabinet-1.2.76/configure	2012-05-24 14:31:45.000000000 +0300
++++ kyotocabinet-1.2.76-patched/configure	2017-03-30 21:51:05.310587927 +0300
+@@ -3986,18 +3986,18 @@
+ else
+   printf 'no\n'
+ fi
+-if test "$enable_opt" != "no"
+-then
+-  printf 'checking for CPU optimization availability... '
+-  if printf 'main() {}' | $CC -xc -march=native -o config.tmp - >config.tmp 2>&1
+-  then
+-    MYCFLAGS="-march=native $MYCFLAGS"
+-    MYCXXFLAGS="-march=native $MYCXXFLAGS"
+-    printf 'yes\n'
+-  else
+-    printf 'no\n'
+-  fi
+-fi
++# if test "$enable_opt" != "no"
++# then
++#   printf 'checking for CPU optimization availability... '
++#   if printf 'main() {}' | $CC -xc -march=native -o config.tmp - >config.tmp 2>&1
++#   then
++#     MYCFLAGS="-march=native $MYCFLAGS"
++#     MYCXXFLAGS="-march=native $MYCXXFLAGS"
++#     printf 'yes\n'
++#   else
++#     printf 'no\n'
++#   fi
++# fi
+ printf 'checking for useless warnings... '
+ if printf 'main() {}' | $CC -xc \
+   -Wno-unused-but-set-variable -Wno-unused-but-set-parameter -o config.tmp - >config.tmp 2>&1
