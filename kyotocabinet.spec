@@ -49,6 +49,7 @@ Kyoto Cabinet is a library of routines for managing a
 database. Test tools
 
 PackageName: Kyoto Cabinet Tools
+Type: console-application
 Categories:
   - Utility
 
