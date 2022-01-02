@@ -22,6 +22,10 @@ used as a key and a value. Each key must be unique within a
 database. There is neither concept of data tables nor data
 types. Records are organized in hash table or B+ tree.
 
+PackageName: Kyoto Cabinet
+Categories:
+  - Library
+
 %package devel
 Summary: Kyoto Cabinet development headers and static library
 Group: Development/Libraries
@@ -31,6 +35,10 @@ Group: Development/Libraries
 Kyoto Cabinet is a library of routines for managing a
 database. Development package
 
+PackageName: Kyoto Cabinet Development
+Categories:
+  - Library
+
 %package tools
 Summary: Kyoto Cabinet tools
 Group: Libraries/Databases
@@ -39,6 +47,10 @@ Requires: %{name} = %{version}
 %description tools
 Kyoto Cabinet is a library of routines for managing a
 database. Test tools
+
+PackageName: Kyoto Cabinet Tools
+Categories:
+  - Utility
 
 %prep
 %setup -q -n kyotocabinet-%{version}
